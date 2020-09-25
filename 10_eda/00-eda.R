@@ -167,24 +167,6 @@ sales %>%
 sales <- sales[sales$year_of_release >= 2002, ]
 
 
-
-
-
-
-# genre and sales
-sales %>%
-  ggplot(aes(x=genre, y=log(global_sales))) +
-  geom_boxplot()
-
-# rating and sales
-sales %>%
-  ggplot(aes(x=rating, y=log(global_sales))) +
-  geom_boxplot()
-
-
-
-
-
 # year of release and global sales
 sales %>%
   ggplot(aes(x=year_of_release, y=log(global_sales))) +
@@ -270,6 +252,18 @@ sales %>%
 sales %>%
   ggplot(aes(x=critic_count, y=log(global_sales), color=genre)) +
   geom_point()
+
+
+sales %>%
+  ggplot(aes(x=critic_count, y=log(global_sales), color=genre)) +
+  geom_point()
+
+
+sales %>%
+  ggplot(aes(x=critic_count, y=log(global_sales), color=genre)) +
+  geom_point()
+
+
 
 sales %>%
   ggplot(aes(x=critic_count, y=log(global_sales), color=rating)) +
